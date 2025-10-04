@@ -1,0 +1,371 @@
+/* --- GLOBAL STYLES --- */
+
+body {
+    font-family: 'Poppins', sans-serif; /* A clean, modern font */
+    background-color: #f4f4f9; /* Light grey background */
+    color: #333; /* Dark grey text for readability */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video is behind other content */
+    object-fit: cover; /* Cover the entire background */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* This new <main> element will center your content */
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    max-width: 100%; /* Increase this value */
+    margin: 40px auto;
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* --- HEADER STYLES --- */
+/* Note: We are targeting the <header> tag now, not #header */
+header {
+    background-color: #2c3e50; /* Dark blue background */
+    color: #ecf0f1; /* Light text color */
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid #355E3B; /* Dark green border */
+    border-bottom: none; /* Removes bottom border */
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 65px; /* Slightly smaller than your original 64px */
+}
+
+header p {
+    color: #1abc9c; /* The accent green color */
+    font-family: 'Roboto Mono', monospace; /* Cool techy font */
+    font-size: 30px; /* EM can replace PX for font sizing */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* --- NAVIGATION LINKS & HOVER EFFECT --- */
+
+/* 1. The DEFAULT state of our navigation links */
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #2c3e50;
+    border-bottom: #355E3B 1px solid;
+    border-left: #355E3B 1px solid;
+    border-right: #355E3B 1px solid;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav.scrolled {
+    border-top: 1px solid #355E3B; /* Only show top border when scrolled */
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 20px;    
+    margin: 0 15px; /* Spaces out the links */
+    position: relative; /* Needed for the lift effect */
+    
+    /* This is the magic! It makes the change smooth */
+    transition: all 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+/* 2. The HOVER state (what happens when you mouse over) */
+nav a:hover {
+    color: #1abc9c;           /* Change to the accent green color */
+    transform: translateY(-3px); /* Lifts the link up by 3 pixels */
+}
+
+nav a i {
+    font-size: 3rem;
+    color: #ecf0f1;
+    transition: color 0.3s;
+}
+nav a:hover i {
+    color: #1abc9c;
+}
+
+/* --- CONTENT SECTION STYLES --- */
+/* We use a single rule to style all sections consistently */
+section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+}
+
+.about-profile-container {
+    display: flex;
+    flex-direction: row-reverse; /* Profile picture on right */
+    align-items: center;         /* Vertically align both items */
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    border: 2px solid #355E3B;
+    padding: 30px 40px;
+    color: #f4f4f9;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+#aboutme {
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+    margin: 0; /* Remove top margin for alignment */
+    padding: 0;
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+#aboutme h1 {
+    color: #1abc9c;
+    font-size: 24px;
+    margin-bottom: 10px; /* Add this line for more space */
+}
+
+#profile-picture {
+    margin: 0; /* Remove top margin for alignment */
+    text-align: right;
+}
+
+#profile-picture img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+#education {
+    background-color: rgba(44, 62, 80, 1); /* Fully opaque, video won't show through */
+    color: #f4f4f9;
+    margin-top: 40px;
+    border: 2px solid #355E3B;
+    padding: 30px 40px;
+    border-radius: 10px;
+
+}
+
+#education h2 {
+    color: #1abc9c;
+    font-size: 24px;
+    margin-bottom: 10px; /* Add this line for more space */
+}
+
+#education ul li {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#education li div {
+    text-align: right;
+    margin-top: 10px;
+}
+
+#education .highlight {
+    margin-top: 40px;
+    display: inline-block;
+    color: #f4f4f9;
+    background-color: #2c3e50;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#education p {
+    font-size: 18px;
+}
+
+
+#experience {
+    background-color: rgba(44, 62, 80, 1); /* Fully opaque, video won't show through */
+    color: #f4f4f9;
+    margin-top: 40px;
+    border: 2px solid #355E3B;
+    padding: 30px 40px;
+    border-radius: 10px;
+
+}
+
+#experience h2 {
+    color: #1abc9c;
+    font-size: 24px;
+    margin-bottom: 10px; /* Add this line for more space */
+}
+
+#experience li div {
+    margin-top: 10px;
+    text-align: right;
+}
+
+#experience ul li {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#experience .highlight {
+    margin-top: 40px;
+    display: inline-block;
+    color: #f4f4f9;
+    background-color: #2c3e50;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#experience p {
+    font-size: 18px;
+}
+
+/* Projects */
+#projects h2 {
+    text-align: left;
+    font-size: 24px;
+    color: #1abc9c;
+    margin-bottom: 40px; /* Add this line for more space */
+}
+
+#projects .highlight {
+    color: #1abc9c;
+    background-color: #2c3e50;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+#projects {
+    display: grid;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    white-space: nowrap;
+}
+
+#projects .projects-card {
+    display: inline-block;
+    margin-bottom: 40px;
+    height: 250px;
+    width: 300px;
+    margin-right: 75px;
+    margin-left: 75px;
+    background-color: #2c3e50;
+    color: #1abc9c;
+    font-weight: bold;
+    vertical-align: top;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+#projects .projects-card img {
+    height: 249px;
+    width: 349px;
+    border: 2px solid #355E3B;
+}
+
+#projects .projects-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and slightly enlarge */
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.3); /* Add shadow */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+#projects .title-text {
+    font-size: 18px;
+}
+
+#contactme {
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #f4f4f9;
+    margin-top: 40px;
+    border: 2px solid #355E3B;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+    header p {
+        font-size: 18px;
+    }
+    section, #education, #experience, #contactme, .about-profile-container {
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+    #profile-picture img {
+        width: 150px;
+        height: 150px;
+    }
+    .about-profile-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    #contactme {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #projects {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 16px;
+        padding-bottom: 16px;
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: #1abc9c #2c3e50; /* For Firefox */
+    }
+
+    #projects .projects-card {
+        flex: 0 0 auto;
+        width: 90vw;
+        margin: 10px auto;
+        height: auto;
+    }
+    #projects .projects-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}

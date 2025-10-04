@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simon's Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<video autoplay muted loop id="bg-video">
+  <source src="Background.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('bg-video');
+    if (video) {
+        video.playbackRate = 0.75; // Set to your desired speed (e.g., 0.5 for half speed)
+    }
+});
+</script>
+
+    <!-- HEADER -->
+    <header>
+    <h1>Simon Matthew Dodd</h1>
+    <p>Aspiring Full Stack Developer</p>
+    </header>
+    <div id="nav-sentinel"></div>
+    <!-- NAVIGATION -->
+<nav>
+    <a href="https://github.com/FullStackSy" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="mailto:simon.matthew.dodd@gmail.com" title="Email">
+        <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/simon-dodd-a2240bb3" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+</nav>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('nav');
+    const sentinel = document.getElementById('nav-sentinel');
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.boundingClientRect.top < 0) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        },
+        { threshold: [0] }
+    );
+    observer.observe(sentinel);
+});
+</script>
+
+    <main>
+
+<!-- Profile Picture -->
+ <div class="about-profile-container">
+    <div id="profile-picture">
+        <img src="Uni Me.jpg" alt="Portfolio Picture" width="300" height="300" style="border-radius:50%;">
+    </div>
+ <!-- ABOUT -->
+    <div id="aboutme">
+        <h1>About Me</h1>
+        <P>I'm Simon, a user experience designer and full-stack software developer with a unique journey from law and IT support to crafting secure, user-centric digital experiences.
+
+        My foundation isn't just in code; it's in understanding people. With a background in User Experience Design and extensive experience in frontline IT support, I build intuitive and engaging front-ends that solve real-world problems for real users. I thrive on transforming complex challenges into seamless, accessible applications.
+
+        My legal training honed my analytical and logical thinking, skills I now leverage to design and architect robust, efficient front-end and back-end systems. My passion for building fundamentally secure solutions is backed by my intensive Full Stack Developer course with Codecademy and my upcoming MSc in Computer Science with Cyber Security from the University of York.
+
+        I am driven to build elegant, full-stack solutions that are as secure as they are user-friendly. Let's create something exceptional together.</P>
+    </div>
+ </div>
+
+        <!-- Projects -->
+     <div id="projects">
+        <h2><span class="highlight"> Projects</span></h2>
+    <div>
+        <div class="projects-card"><img src="Screenshot 2.png" alt="my project"><div class="title-text">Health & Wellbeing App</div></div>
+        <div class="projects-card"><img src="Database Eye.jpg"><div class="title-text">Data Management App</div></div>
+        <div class="projects-card"><img src="AI Chatbot.webp" alt="my project"><div class="title-text">AI Chatbot</div></div>
+    </div>
+
+     </div>
+
+     <!-- EDUCATION -->
+    <div id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><span class="highlight">Full Stack Developer Certificate - Codecademy</span> <div>(Sept 2025 - Present)</div></li>
+            <p>Focusing on front-end and back-end development, including HTML, CSS, JavaScript (React.js, Node.js, and MongoDB), Portfolio building, designing and building projects from the ground up, with an emphasis on responsive design, and creating user-friendly interfaces.</p>
+
+            <li><span class="highlight">Master's Degree in Computer Science with Cyber Security - University of York</span> <div>(March 2025 - Present)</div></li>
+            <p>Studying Security Engineering, Cyber Security Threats, Algorithms and Data Structures, Advanced Programming, Computer Architecture and Operating Systems, Computer and Mobile Networks, Software Engineering, Artificial Intelligence, Machine Learning, and Python Programming Language.</p>
+
+            <li><span class="highlight">Postgraduate Certificate in User Experience Design - Birmingham City University</span> <div>(Sept 2022 - Sept 2023)</div></li>
+            <p>Focused on user-centered design principles, conducting user research, and creating wireframes and prototypes. Collaborated with cross-functional teams to enhance user experiences.</p>
+
+            <li><span class="highlight">Undergraduate Degree in LLB (Hons) Law - University of Worcester</span> <div>(Sept 2017 - Sept 2020)</div></li>
+            <p>Studied various aspects of law, including contract law, criminal law, and constitutional law. Developed strong analytical and research skills, with a focus on legal writing and argumentation.</p>
+        </ul>
+    </div>
+
+    <!-- EXPERIENCE-->
+    <div id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><span class="highlight">ICT Support Technician - Unimetals Ltd</span> <div>(May 2024 - Present)</div></li>
+            <p>Frontline software/hardware support, resolving 95% of user queries within the first contact. Developed helpdesk procedures, improving response times. Daily backups, hardware deployment/repair, user account management, and IT procurement assistance.</p>
+
+            <li><span class="highlight">ICT Support Technician - BDR Voice & Data Ltd</span> <div>(Sept 2023 - Oct 2023)</div></li>
+            <p>Provided IT solutions using Salesforce, CMD, and remote tools. Resolved 90% of incidents within SLA, demonstrating strong problem-solving skills. Configuration and deployment of new hardware and software</p>
+
+            <li><span class="highlight">Operations Team Member - KFC UK & Ireland</span> <div>(Sept 2022 - Sept 2023)</div></li>
+            <p>Provided excellent customer service, maintained cleanliness, and handled cash transactions efficiently.</p>
+
+            <li><span class="highlight">ICT Support Technician - PFM Inteligence Europe Ltd</span> <div>(Nov 2021 - Feb 2022)</div></li>
+            <p>Drove a 95% reduction in site response times by overhauling the IT support workflow and managing the full lifecycle of helpdesk tickets from diagnosis to resolution. Acted as a key member of the Project Management Team, coordinating the national deployment and scheduling of IT Field Engineers for hardware installations and repairs.</p>
+        </ul>
+            
+
+    </div>
+
+    <form>
+<div id="contactme">
+    <div>
+        <h2>Get In Touch</h2>
+        <p>If you'd like to discuss potential collaborations, job opportunities, or simply want to connect, <br> please fill out the form below or follow me on social media. <br><br>I look forward to hearing from you!</p>
+    </div>
+        Name: <input type="text" name="name" placeholder="Name" required><br><br>
+                Email: <input type="Email" name="email" placeholder="Email" required><br><br>
+        Reason for Contact: <select name="Type of Inquiry" required>
+            <option value="">Select Reason</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Job Opportunity">Job Opportunity</option>
+            <option value="Freelance">Freelance</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+    <div id="Message">        <textarea name="experience" rows="10" cols="50" maxlength="5000">Your Message Here</textarea><br><br>
+                Attachments: <input type="file">
+    </div>
+<br><br>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+    <!-- FOOTER -->
+    <footer>
+        <p style="font-weight: Bold;" style="color: black;">© 2025 Simon Matthew Dodd. All Rights Reserved.</p>
+    </footer>
+</body>
+</main>
+</html>
